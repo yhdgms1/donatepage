@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face{
+  font-family: 'eudoxus sans';
+  src:url(/EudoxusSans-Bold.woff2) format('woff2');
+  font-weight:700;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family: 'eudoxus sans';
+  src:url(/EudoxusSans-Regular.woff2) format('woff2');
+  font-weight:400;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family: 'eudoxus sans';
+  src:url(/EudoxusSans-Light.woff2) format('woff2');
+  font-weight:300;
+  font-style:normal;
+  font-display:block;
+}
+
+@font-face{
+  font-family: 'eudoxus sans';
+  src:url(/EudoxusSans-Medium.woff2) format('woff2');
+  font-weight:500;
+  font-style:normal;
+  font-display:block;
+}

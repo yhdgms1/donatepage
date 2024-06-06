@@ -1,0 +1,54 @@
+{
+  "tasks": {
+    "check": "deno fmt --check && deno lint && deno check **/*.ts && deno check **/*.tsx",
+    "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
+    "manifest": "deno task cli manifest $(pwd)",
+    "start": "deno run -A --unstable-kv --allow-env --allow-net --watch=static/,routes/ dev.ts",
+    "build": "deno run -A --unstable-kv --allow-env --allow-net dev.ts build",
+    "preview": "deno run -A --unstable-kv --allow-env --allow-net main.ts",
+    "update": "deno run -A -r https://fresh.deno.dev/update ."
+  },
+  "deploy": {
+    "project": "04f85486-9b3a-47e0-be1b-ced9df23bf66",
+    "exclude": [
+      "**/node_modules",
+      "*.lock",
+      "deno.json"
+    ],
+    "include": [
+    ],
+    "entrypoint": "./main.ts"
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "fresh",
+        "recommended"
+      ]
+    }
+  },
+  "exclude": [
+    "**/_fresh/*"
+  ],
+  "imports": {
+    "dotenv": "https://deno.land/std@0.224.0/dotenv/mod.ts",
+    "ts-pattern": "npm:ts-pattern@5.1.2",
+    "qr-creator": "npm:qr-creator@1.0.0",
+    "nanoid": "npm:nanoid@5.0.7",
+    "copy-to-clipboard": "npm:copy-to-clipboard@3.3.3",
+    "valibot": "npm:valibot@0.31.0-rc.12",
+    "$fresh/": "https://deno.land/x/fresh@1.6.8/",
+    "preact": "https://esm.sh/preact@10.19.6",
+    "preact/": "https://esm.sh/preact@10.19.6/",
+    "tailwindcss": "npm:tailwindcss@3.4.1",
+    "tailwindcss/": "npm:/tailwindcss@3.4.1/",
+    "tailwindcss/plugin": "npm:/tailwindcss@3.4.1/plugin.js",
+    "$std/": "https://deno.land/std@0.216.0/",
+    "@auth/core": "npm:@auth/core@^0.32.0"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "nodeModulesDir": true
+}
